@@ -1,0 +1,42 @@
+<div class="h-100 d-flex align-items-center main-container overflow-hidden">
+  <div class="row h-100 w-100">
+    <div class="col d-flex align-items-center">
+      <p-card class="poke-picture">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <img
+            class="poke-picture__front"
+            [src]="selectedPkmSpriteUrl"
+            alt=""
+          />
+        </div>
+      </p-card>
+    </div>
+    <div class="col d-flex h-100 justify-content-center">
+      <p-listbox
+        class="pokemon-list"
+        [options]="pkmList"
+        [(ngModel)]="selectedPkm"
+        optionLabel="name"
+        (click)="GetPkmByID()"
+      >
+        <ng-template let-country pTemplate="item">
+          <div class="list-element row align-items-center">
+            <div class="col">
+              <img
+                class="pokeball-img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/1026px-Pok%C3%A9_Ball_icon.svg.png"
+                alt=""
+              />
+            </div>
+            <div class="col">
+              <h2>N.{{ (pkmList | indexofpipe: country) + 1}}</h2>
+            </div>
+            <div class="col">
+              <h2>{{ country.name }}</h2>
+            </div>
+          </div>
+        </ng-template>
+      </p-listbox>
+    </div>
+  </div>
+</div>

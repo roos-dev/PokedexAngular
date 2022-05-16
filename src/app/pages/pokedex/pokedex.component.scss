@@ -1,0 +1,67 @@
+.poke-picture {
+  height: 80%;
+  width: 100%;
+  border: solid 10px #a5a540;
+  border-radius: 1rem;
+  ::ng-deep {
+    .p-card {
+      height: 100% !important;
+      .p-card-body {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cedce7+7,cedce7+20,596a72+87 */
+        background: rgb(206, 220, 231); /* Old browsers */
+        background: -moz-linear-gradient(
+          top,
+          rgba(206, 220, 231, 1) 7%,
+          rgba(206, 220, 231, 1) 20%,
+          rgba(89, 106, 114, 1) 87%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+          top,
+          rgba(206, 220, 231, 1) 7%,
+          rgba(206, 220, 231, 1) 20%,
+          rgba(89, 106, 114, 1) 87%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(
+          to bottom,
+          rgba(206, 220, 231, 1) 7%,
+          rgba(206, 220, 231, 1) 20%,
+          rgba(89, 106, 114, 1) 87%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
+
+        padding: 0px;
+        height: 100%;
+        .p-card-content {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .poke-picture__front {
+    width: 70%;
+  }
+}
+
+.pokemon-list {
+  width: 100%;
+  ::ng-deep {
+    .p-listbox {
+      height: 100%;
+      width: 100%;
+      overflow: scroll !important;
+    }
+  }
+}
+
+.list-element {
+  height: 70px;
+  width: 100%;
+  background: rgba(207, 221, 85, 0.945);
+  border-radius: 2rem 0 0 2rem;
+}
+
+.pokeball-img {
+  width: 50px;
+}
