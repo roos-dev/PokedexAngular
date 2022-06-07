@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PokedexComponent } from './pages/pokedex/pokedex.component';
+import { ItembagComponent } from './pages/itembag/itembag.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: '',
         component: PokedexComponent,
+      },
+      {
+        path: 'itembag',
+        component: ItembagComponent,
       },
     ],
   },

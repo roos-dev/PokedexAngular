@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  sidebarItems: MenuItem[] = [];
   display = true;
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit(): void {
     console.log('NgOnInit Home component');
+    this.sidebarItems = [
+      { label: 'pokedex', icon: 'pi pi-tablet', routerLink: '/home' },
+      { label: 'items', icon: 'pi pi-shopping-bag', routerLink: '/home/itembag' },
+    ];
   }
 }

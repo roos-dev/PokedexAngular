@@ -45,21 +45,36 @@
 }
 
 .pokemon-list {
+  background: transparent;
   width: 100%;
   ::ng-deep {
     .p-listbox {
       height: 100%;
+      border: none;
       width: 100%;
       overflow: scroll !important;
+      background: transparent;
+    }
+    .p-listbox-list {
+      .p-listbox-item {
+        border-radius: 2rem 0 0 2rem;
+        height: 70px;
+        width: 100%;
+        background: rgba(207, 221, 85, 0.945);
+        margin-bottom: 10px;
+        &:hover {
+          background: red !important;
+        }
+        &.p-highlight {
+          background: red !important;
+          color: black;
+        }
+        &[aria-selected="true"] {
+          background: orange !important;
+        }
+      }
     }
   }
-}
-
-.list-element {
-  height: 70px;
-  width: 100%;
-  background: rgba(207, 221, 85, 0.945);
-  border-radius: 2rem 0 0 2rem;
 }
 
 .pokeball-img {
